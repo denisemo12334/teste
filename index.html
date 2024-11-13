@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoverBooks</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Cabeçalho */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #2a2a2a;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            color: #f0f0f0;
+            text-decoration: none;
+        }
+        .icons {
+            display: flex;
+            gap: 15px;
+        }
+        .icons i {
+            font-size: 20px;
+            color: #f0f0f0;
+        }
+
+        /* Seção de pesquisa */
+        .search-section {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #2a2a2a;
+        }
+        .search-section h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .search-bar {
+            width: 100%;
+            max-width: 600px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            color: #f0f0f0;
+            background-color: #333333;
+        }
+
+        /* Seções de livros */
+        .section {
+            padding: 30px 20px;
+        }
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        .book-list {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+        }
+        .book {
+            background-color: #333333;
+            padding: 10px;
+            width: 150px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .book img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .book-title {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #0d0d0d;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">CoverBooks</div>
+        <nav class="nav-links">
+            <a href="#">Categoria</a>
+            <a href="#">Favoritos</a>
+            <a href="#">Mais Vendidos</a>
+        </nav>
+        <div class="icons">
+            <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-user"></i>
+        </div>
+    </header>
+
+    <!-- Seção de Pesquisa -->
+    <section class="search-section">
+        <h1>Já sabe por onde começar?</h1>
+        <input type="text" class="search-bar" placeholder="Procure pelo seu livro favorito...">
+    </section>
+
+    <!-- Seção de Novos Lançamentos -->
+    <section class="section">
+        <h2 class="section-title">Novos Lançamentos</h2>
+        <div class="book-list">
+            <div class="book">
+                <img src="livro_do_bill.jpg" alt="Livro do Bill">
+                <div class="book-title">Livro do Bill</div>
+            </div>
+            <div class="book">
+                <img src="into_the_pit.jpg" alt="Into the Pit">
+                <div class="book-title">Into the Pit (FNAF)</div>
+            </div>
+            <div class="book">
+                <img src="illusion_of_living.jpg" alt="The Illusion of Living">
+                <div class="book-title">The Illusion of Living (Bendy)</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Mais Vendidos -->
+    <section class="section">
+        <h2 class="section-title">Mais Vendidos</h2>
+        <div class="book-list">
+            <div class="book">
+                <img src="mais_vendido1.jpg" alt="Mais Vendido 1">
+                <div class="book-title">Mais Vendido 1</div>
+            </div>
+            <div class="book">
+                <img src="mais_vendido2.jpg" alt="Mais Vendido 2">
+                <div class="book-title">Mais Vendido 2</div>
+            </div>
+            <div class="book">
+                <img src="mais_vendido3.jpg" alt="Mais Vendido 3">
+                <div class="book-title">Mais Vendido 3</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        Contato: coverbooks@gmail.com
+    </footer>
+
+    <!-- Ícones (Font Awesome) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
