@@ -1,175 +1,202 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoverBooks</title>
     <style>
-        /* Estilos gerais */
         body {
+            background-color: #1c1c1c;
+            color: #ffffff;
             font-family: Arial, sans-serif;
-            background-color: #1a1a1a;
-            color: #f0f0f0;
             margin: 0;
             padding: 0;
         }
 
         /* Cabeçalho */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: #2a2a2a;
+        .header {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
         }
-        .logo {
+
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .site-name {
             font-size: 24px;
             font-weight: bold;
         }
-        .nav-links {
+
+        /* Livros em colunas */
+        .books-container {
             display: flex;
-            gap: 20px;
-        }
-        .nav-links a {
-            color: #f0f0f0;
-            text-decoration: none;
-        }
-        .icons {
-            display: flex;
-            gap: 15px;
-        }
-        .icons i {
-            font-size: 20px;
-            color: #f0f0f0;
+            justify-content: space-between;
+            padding: 20px;
         }
 
-        /* Seção de pesquisa */
-        .search-section {
-            text-align: center;
-            padding: 50px 20px;
-            background-color: #2a2a2a;
-        }
-        .search-section h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        .search-bar {
-            width: 100%;
-            max-width: 600px;
-            padding: 10px;
-            border-radius: 5px;
-            border: none;
-            font-size: 16px;
-            color: #f0f0f0;
-            background-color: #333333;
+        .books-section {
+            flex: 1;
+            padding: 0 20px;
         }
 
-        /* Seções de livros */
-        .section {
-            padding: 30px 20px;
+        .separator {
+            width: 2px;
+            background-color: #555;
         }
+
         .section-title {
             font-size: 20px;
             margin-bottom: 15px;
+            text-align: center;
         }
-        .book-list {
-            display: flex;
-            gap: 20px;
-            overflow-x: auto;
+
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 10px;
+            justify-items: center;
         }
+
         .book {
-            background-color: #333333;
+            background-color: #3a3a3a;
             padding: 10px;
-            width: 150px;
             text-align: center;
             border-radius: 5px;
+            width: 120px;
         }
+
         .book img {
             width: 100%;
+            height: auto;
             border-radius: 5px;
-            margin-bottom: 10px;
         }
-        .book-title {
+
+        /* Encomendas */
+        .order-section {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .order-text {
+            flex: 1;
+            text-align: center;
+        }
+
+        .order-text h3 {
+            font-size: 24px;
+            margin: 0 0 10px;
+        }
+
+        .order-text p {
+            margin-bottom: 20px;
             font-size: 16px;
-            margin-bottom: 5px;
+        }
+
+        .order-text button {
+            padding: 10px 20px;
+            background-color: #5a5a5a;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .order-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .order-image img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 10px;
         }
 
         /* Rodapé */
-        footer {
-            background-color: #0d0d0d;
+        .footer {
+            background-color: #333;
+            padding: 10px;
             text-align: center;
-            padding: 20px;
             font-size: 14px;
-            color: #f0f0f0;
+            color: #cccccc;
         }
     </style>
 </head>
 <body>
 
     <!-- Cabeçalho -->
-    <!-- Cabeçalho -->
-    <header>
-        <div class="logo">CoverBooks</div>
-        <nav class="nav-links">
-            <a href="#">Categoria</a>
-            <a href="#">Favoritos</a>
-            <a href="#">Mais Vendidos</a>
-        </nav>
-        <div class="icons">
-            <i class="fas fa-shopping-cart"></i>
-            <i class="fas fa-user"></i>
+    <header class="header">
+        <div class="header-content">
+            <span class="site-name">CoverBooks</span>
         </div>
     </header>
 
-    <!-- Seção de Pesquisa -->
-    <section class="search-section">
-        <h1>Já sabe por onde começar?</h1>
-        <input type="text" class="search-bar" placeholder="Procure pelo seu livro favorito...">
+    <!-- Livros: Lado a lado -->
+    <section class="books-container">
+        <div class="books-section">
+            <h3 class="section-title">Novos Lançamentos</h3>
+            <div class="books-grid">
+                <div class="book">
+                    <img src="images/livro_do_bill.jpg" alt="Livro do Bill">
+                    <p>Livro do Bill</p>
+                </div>
+                <div class="book">
+                    <img src="images/into_the_pit.jpg" alt="Into the Pit">
+                    <p>Into the Pit (FNaF)</p>
+                </div>
+                <div class="book">
+                    <img src="images/illusion_of_living.jpg" alt="The Illusion of Living">
+                    <p>The Illusion of Living</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="books-section">
+            <h3 class="section-title">Mais Vendidos</h3>
+            <div class="books-grid">
+                <div class="book">
+                    <img src="images/mais_vendido1.jpg" alt="Mais Vendido 1">
+                    <p>Mais Vendido 1</p>
+                </div>
+                <div class="book">
+                    <img src="images/mais_vendido2.jpg" alt="Mais Vendido 2">
+                    <p>Mais Vendido 2</p>
+                </div>
+                <div class="book">
+                    <img src="images/mais_vendido3.jpg" alt="Mais Vendido 3">
+                    <p>Mais Vendido 3</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Seção de Novos Lançamentos -->
-    <section class="section">
-        <h2 class="section-title">Novos Lançamentos</h2>
-        <div class="book-list">
-            <div class="book">
-                <img src="https://m.media-amazon.com/images/I/81O6JfipQhL._SL1500_.jpg" alt="Livro do Bill">
-                <div class="book-title">Livro do Bill</div>
-            </div>
-            <div class="book">
-                <img src="https://m.media-amazon.com/images/I/81U2Hy3rvrL._SL1500_.jpg" alt="Into the Pit">
-                <div class="book-title">Into the Pit (FNAF)</div>
-            </div>
-            <div class="book">
-                <img src="https://m.media-amazon.com/images/I/91708CT8s6S._SL1500_.jpg" alt="The Illusion of Living">
-                <div class="book-title">The Illusion of Living (Bendy)</div>
-            </div>
-    </section>
-
-    <!-- Seção de Mais Vendidos -->
-    <section class="section">
-        <h2 class="section-title">Mais Vendidos</h2>
-        <div class="book-list">
-            <div class="book">
-                <img src="https://m.media-amazon.com/images/I/91Q5llF8hoL._SL1500_.jpg" alt="Mais Vendido 1">
-                <div class="book-title">Desventuras em Série</div>
-            </div>
-            <div class="book">
-                <img src="https://m.media-amazon.com/images/I/71n43yTJXvL._SL1500_.jpg" alt="Mais Vendido 2">
-                <div class="book-title">Horror em Amityville</div>
-            </div>
-            <div class="book">
-                <img src="https://uploads.jovemnerd.com.br/wp-content/uploads/2017/08/ed.jpg" alt="Mais Vendido 3">
-                <div class="book-title">Ed & Lorraine Warren</div>
-            </div>
+    <!-- Encomendas -->
+    <section class="order-section">
+        <div class="order-text">
+            <h3>Encomende seu livro favorito conosco!</h3>
+            <p>Faça a encomenda dos livros que deseja e receba diretamente em sua casa. Garantimos uma experiência rápida e segura.</p>
+            <button>Saiba Mais</button>
+        </div>
+        <div class="order-image">
+            <img src="images/encomenda.jpg" alt="Encomenda de Livros">
         </div>
     </section>
 
     <!-- Rodapé -->
-    <footer>
-        Contato: coverbooks@gmail.com
+    <footer class="footer">
+        <p>Email de contato: coverbooks@gmail.com</p>
     </footer>
 
-    <!-- Ícones (Font Awesome) -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
